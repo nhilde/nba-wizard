@@ -1,41 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <title>NBA Wizard</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>NBA Wizard</title>
 </head>
+
 <body>
-    <!-- header / title -->
 
-    <nav class="navbar has-shadow is-primary">
- 
-        <div class="navbar-brand">
-            <a class="navbar-item"></a>
-            <img src="./assets/d5jsd9s-9ac77f50-c309-444a-ba13-9cacb5effc63-removebg-preview.png" alt="site logo" style="max-height: 150px" class="py-2 px-2">
-        </div>
-
-        <div class="navbar-menu" id="nav-links">
-            <div class="navbar-end">
-                <a class="navbar-item">HOME</a>
-                <a class="navbar-item">SEARCH</a>
-            </div>
-        </div>
-    </nav>
-
+  <!-- header / title -->
+  <nav class="navbar has-shadow is-black">
+    <div class="navbar-brand">
+      <a class="navbar-item"></a>
+      <img src="./assets/d5jsd9s-9ac77f50-c309-444a-ba13-9cacb5effc63-removebg-preview.png" alt="site logo"
+      style="max-height: 100px" class="py-2 px-2">
+      <p class="title is-1 mt-5 has-text-white">NBA WIZARD</p>
       
-
+      
+      
+      
       
       
       <div class="columns">
+        <!-- optional menu right side of header  -->
+        <div class="navbar-menu" id="nav-links">
+          <div class="navbar-end">
+            <a class="navbar-item">HOME</a>
+          </div>
+        </div>
+        </nav>
+        <!--column for finding a team  -->
+        <div class="columns">
         <div class="column is-narrow">
-          <div class="box" style="width: 200px;">
-            <p class="title is-5">ADV SEARCH BAR</p>
-            <p class="subtitle">This column is only 200px wide.</p>
-            <p>This column is only 200px wide.</p>
-            <p>This column is only 200px wide.</p>   
+          <div class="box" style="width: 400px;">
+            <p class="title is-5">SEARCH BY TEAM</p>
+            <!-- teams in dropdown menu -->
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                  <span>ALL NBA TEAMS</span>
+                  <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                  </span>
+                </button>
+              </div>
+        
+              
+              <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                <div class="dropdown-content">
+                  <div class="dropdown-item">
+                    <p><strong>Eastern Conference</strong></p>
+                    <li><a href="#atlanta">Atlanta Hawks</a></li>
+                    <li><a href="#boston">Boston Celtics</a></li>
+                    <li><a href="#brooklyn">Brooklyn Nets</a></li>
+                    <li><a href="#charlotte">Charlotte Hornets</a></li>
+                    <li><a href="#chicago">Chicago Bulls</a></li>
+                    <li><a href="#cleveland">Cleveland Cavaliers</a></li>
+                    <li><a href="#detroit">Detroit Pistons</a></li>
+                    <li><a href="#indiana">Indiana Pacers</a></li>
+                    <li><a href="#miami">Miami Heat</a></li>
+                    <li><a href="#miluwakee">Miluwakee Bucks</a></li>
+                    <li><a href="#newyork">New York Knicks</a></li>
+                    <li><a href="#orlando">Orlando Magic</a></li>
+                    <li><a href="#philadelphia">Philadelphia 76ers</a></li>
+                    <li><a href="#toronto">Toronto Raptors</a></li>
+                    <li><a href="#washington">Washington Wizards</a></li>
+                  </div>
+        
+                  <hr class="dropdown-divider">
+                  <div class="dropdown-item">
+                    <p><strong>Western Conference</strong></p>
+                    <li><a href="#dallas">Dallas Mavericks</a></li>
+                    <li><a href="#denver">Denver Nuggets</a></li>
+                    <li><a href="#goldenState">Golden State Warriors</a></li>
+                    <li><a href="#houston">Houston Rockets</a></li>
+                    <li><a href="#clippers">Los Angeles Clippers</a></li>
+                    <li><a href="#lakers">Los Angeles Lakers</a></li>
+                    <li><a href="#memphis">Memphis Grizzlies</a></li>
+                    <li><a href="#minnesota">Minnesota TImberwolves</a></li>
+                    <li><a href="#newOrleans">New Orleans Pelicans</a></li>
+                    <li><a href="#oklahoma">Oklahoma City Thunder</a></li>
+                    <li><a href="#phoenix">Phoenix Suns</a></li>
+                    <li><a href="#portland">Portland Trailblazers</a></li>
+                    <li><a href="#sacramento">Sacramento Kings</a></li>
+                    <li><a href="#sanAntonio">San Antonio Spurs</a></li>
+                    <li><a href="#utah">Utah Jazz</a></li>
+                  </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <p class="subtitle"></p>
           </div>
         </div>
         <div class="column">
@@ -43,6 +106,9 @@
             <p class="title is-5">SCHEDULED GAMES</p>
             <p class="subtitle">This column will take up the remaining space available.</p>
           </div>
+        </div>
+        
+        <div class="column">
           <div class="box">
             <p class="title is-5">SEASON STANDINGS</p>
             <p class="subtitle">This column will take up the remaining space available.</p>
@@ -65,6 +131,8 @@
                 <tr>
                   <th><abbr title="Position">Pos</abbr></th>
                   <th>Team</th>
+                  
+                  </div>
                   <th><abbr title="Played">Pld</abbr></th>
                   <th><abbr title="Won">W</abbr></th>
                   <th><abbr title="Lost">L</abbr></th>
@@ -88,7 +156,7 @@
                   <td>36</td>
                   <td>+32</td>
                   <td>81</td>
-                  <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016–17 UEFA Champions League">Champions League group stage</a></td>
+                  <td>Qualification for the <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage" title="2016-17 UEFA Champions League">Champions League group stage</a></td>
                 </tr>
               </tbody>
             </table>
@@ -105,20 +173,7 @@
 </html>
 
 
+  <script src="./assets/script.js"></script>
+</body>
 
-
-
-
-      <!-- search bar -->
-       <!-- <div class="field is-grouped is-grouped-right">
-        <p class="control">
-            <input class="input" type="text" placeholder="Search for a team">
-        </p>
-        <p class="control">
-            <a class="button is-info">
-              Search
-            </a>
-          </p>
-        </div>
-    </div>
-  </section>      -->
+</html>
