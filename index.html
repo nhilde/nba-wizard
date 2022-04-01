@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/style.css">
   <title>NBA Wizard</title>
 </head>
 
@@ -21,7 +21,7 @@
     <div class="navbar-brand">
       <a class="navbar-item"></a>
       <img src="./assets/d5jsd9s-9ac77f50-c309-444a-ba13-9cacb5effc63-removebg-preview.png" alt="site logo"
-        style="max-height: 100px" class="py-2 px-2">
+      style="max-height: 100px" class="py-2 px-2">
       <p class="title is-1 mt-5 has-text-white">NBA WIZARD</p>
       <p class="title is-5 mt-5 py-4 px-6 has-text-white">GAMES • STATISTICS • SCHEDULES ON THE GO!</p>
 
@@ -160,8 +160,7 @@
   </div>
   </div>
 
-<!-- todays games -->
-  
+  <!-- todays games -->
   <div class="column">
     <div class="box">
  <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
@@ -169,34 +168,11 @@
     <thead>
       <tr>
         <th><abbr title="homeTeam">Home Team</abbr></th>
-        <th><abbr title="hwayTeam">Away Team</abbr></th>
+        <th><abbr title="awayTeam">Away Team</abbr></th>
         <th><abbr title="time">Time</abbr></th>
       </tr>
     </thead>
-    <tfoot>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      
-     
-     
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-    
-   
-      </tr>
-      <tr>
-        <th></th>
-        <td></td>
-        <td></td>
- 
-     
-    
-     </tr>
+    <tbody id="matches">
     </tbody>
   </table>
 
