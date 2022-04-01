@@ -23,14 +23,14 @@
       <img src="./assets/d5jsd9s-9ac77f50-c309-444a-ba13-9cacb5effc63-removebg-preview.png" alt="site logo"
         style="max-height: 100px" class="py-2 px-2">
       <p class="title is-1 mt-5 has-text-white">NBA WIZARD</p>
-      <p class="title is-5 mt-5 py-4 px-6 has-text-white">GAMES • STATISTICS • SCHEDULES ON THE GO!</p>
+      <p class="title is-5 mt-5 py-4 px-6 has-text-white">STATISTICS ON THE GO!</p>
 
     </div>
     
     <!-- optional menu right side of header  -->
     <div class="navbar-menu" id="nav-links">
       <div class="navbar-end">
-        <a class="navbar-item">HOME</a>
+        <a class="navbar-item"></a>
       </div>
     </div>
   </nav>
@@ -45,71 +45,86 @@
   
   <!--column for finding a team  -->
   <div class="columns">
-    
     <div class="column is-narrow">
       <div class="box" style="width: 400px;">
         <p class="title is-5">SEARCH BY TEAM</p>
         <!-- teams in dropdown menu -->
         <div class="dropdown is-hoverable">
-          <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-              <span>ALL NBA TEAMS</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
+          <div class="select">
+            <select name="teamChoice" id="teamList" >
+              <option value="1">Atlanta Hawks</option>
+              <option value="2">Boston Celtics</option>
+              <option value="4">Brooklyn Nets</option>
+              <option value="5">Charlotte Hornets</option>
+              <option value="6">Chicago Bulls</option>
+              <option value="7">Cleveland Cavaliers</option>
+              <option value="10">Detroit Pistons</option>
+              <option value="15">Indiana Pacers</option>
+              <option value="20">Miami Heat</option>
+              <option value="21">Miluwakee Bucks</option>
+              <option value="24">New York Knicks</option>
+              <option value="26">Orlando Magic</option>
+              <option value="27">Philadelphia Seventy Sixers</option>
+              <option value="38">Toronto Raptors</option>
+              <option value="41">Washington Wizards</option>
+              <option value="8">Dallas Mavericks</option>
+              <option value="9">Denver Nuggets</option>
+              <option value="11">Golden State Warriors</option>
+              <option value="14">Houston Rockets</option>
+              <option value="16">Los Angeles Clippers</option>
+              <option value="17">Los Angeles Lakers</option>
+              <option value="19">Memphis Grizzlies</option>
+              <option value="22">Minnesota Timberwolves</option>
+              <option value="23">New Orleans Pelicans</option>
+              <option value="25">Oklahoma City Thunder</option>
+              <option value="28">Pheonix Suns</option>
+              <option value="29">Portland Trailblazers</option>
+              <option value="30">Sacramento Kings</option>
+              <option value="31">San Antonio Spurs</option>
+              <option value="40">Utah Jazz</option>
+            </select>
           </div>
-
-
-          <div class="dropdown-menu" id="dropdown-menu2" role="menu">
-            <div class="dropdown-content">
-              <form class="dropdown-item">
-                <p><strong>Eastern Conference</strong></p>
-                <li><a href="#Hawks">Atlanta Hawks</a></li>
-                <li><a href="#Celtics">Boston Celtics</a></li>
-                <li><a href="#Nets">Brooklyn Nets</a></li>
-                <li><a href="#Hornets">Charlotte Hornets</a></li>
-                <li><a href="#Bulls">Chicago Bulls</a></li>
-                <li><a href="#Cavaliers">Cleveland Cavaliers</a></li>
-                <li><a href="#Pistons">Detroit Pistons</a></li>
-                <li><a href="#Pacers">Indiana Pacers</a></li>
-                <li><a href="#Heat">Miami Heat</a></li>
-                <li><a href="#Bucks">Miluwakee Bucks</a></li>
-                <li><a href="#Knicks">New York Knicks</a></li>
-                <li><a href="#Magic">Orlando Magic</a></li>
-                <li><a href="#Sixers">Philadelphia 76ers</a></li>
-                <li><a href="#Raptors">Toronto Raptors</a></li>
-                <li><a href="#Wizards">Washington Wizards</a></li>
-          </form>
-
-          <hr class="dropdown-divider">
-          <form class="dropdown-item">
-            <p><strong>Western Conference</strong></p>
-            <li><a href="#Mavericks">Dallas Mavericks</a></li>
-            <li><a href="#Nuggets">Denver Nuggets</a></li>
-            <li><a href="#Warriors">Golden State Warriors</a></li>
-            <li><a href="#Houston">Houston Rockets</a></li>
-            <li><a href="#Clippers">Los Angeles Clippers</a></li>
-            <li><a href="#Lakers">Los Angeles Lakers</a></li>
-            <li><a href="#Grizzlies">Memphis Grizzlies</a></li>
-            <li><a href="#Timberwolves">Minnesota Timberwolves</a></li>
-            <li><a href="#Pelicans">New Orleans Pelicans</a></li>
-            <li><a href="#Thunder">Oklahoma City Thunder</a></li>
-            <li><a href="#Suns">Phoenix Suns</a></li>
-            <li><a href="#Trailblazers">Portland Trailblazers</a></li>
-            <li><a href="#Kings">Sacramento Kings</a></li>
-            <li><a href="#Spurs">San Antonio Spurs</a></li>
-            <li><a href="#Jazz">Utah Jazz</a></li>
-          </form>
         </div>
       </div>
     </div>
   </div>
-</div>
+  </div>
+  <div class="column">
+    <div class="box">
+      <p class="title is-5">2020/21 Team Stats</p>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3 class="statName">Points Scored</h3>
+          <p id="points"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Feild Goal Percentage</h3>
+          <p id="fgp"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Rebounds</h3>
+         <p id="rebounds"></p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3 class="statName">Blocks</h3>
+         <p id="blocks"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Assists</h3>
+          <p id="assists"></p>
+        </div>
+        <div class="column is-one-third">
+          <h3 class="statName">Steals</h3>
+          <p id="steals"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 
-
-
-
+<!-- 
   <div class="column">
     <div class="box">
       <p class="title is-5">SCHEDULED GAMES</p>
@@ -158,9 +173,10 @@
       </div>
     </div>
   </div>
-  </div>
+  </div> -->
 
 <!-- todays games -->
+
   
   <div class="column">
     <div class="box">
