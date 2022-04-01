@@ -41,12 +41,6 @@ function gameAdd(data) {
 getGames();
 
 
-
-
-
-
-
-
 var teamList = document.querySelector("#teamList")
 var points = document.querySelector("#points")
 var fgp = document.querySelector("#fgp")
