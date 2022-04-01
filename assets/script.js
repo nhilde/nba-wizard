@@ -39,3 +39,36 @@ function gameAdd(data) {
 };
 
 getGames();
+
+
+var teamList = document.querySelector("#teamList")
+var points = document.querySelector("#points")
+var fgp = document.querySelector("#fgp")
+var rebounds = document.querySelector("#rebounds")
+var blocks = document.querySelector("#blocks")
+var assists = document.querySelector("#assists")
+var steals = document.querySelector("#steals")
+teamList.addEventListener("change", function() {
+event.preventDefault();
+var teamPick = teamList.options[teamList.selectedIndex].value;
+console.log(teamPick)
+fetch("https://api-nba-v1.p.rapidapi.com/teams/statistics?season=2020&id=" + teamPick, {
+  "method": "GET",
+  "headers": {
+    "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
+    "x-rapidapi-key": "c3ac038ae5mshc0dff3a129966bdp19bcdcjsn14bbac3d3957"
+  }
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    points.textContent = data.response[0].points;
+    fgp.textContent = data.response[0].fgp + "%";
+    rebounds.textContent = data.response[0].totReb;
+    blocks.textContent = data.response[0].blocks;
+    assists.textContent = data.response[0].assists;
+    steals.textContent = data.response[0].steals;
+  })
+})
