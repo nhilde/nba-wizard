@@ -16,7 +16,7 @@ todaysDate = todaysYear + todaysMonth + todaysDay;
 
 // Fetch API data for today's games
 function getGames() {
-    fetch('http://data.nba.net/10s/prod/v1/' + todaysDate + '/scoreboard.json')
+    fetch('https://data.nba.net/10s/prod/v1/' + todaysDate + '/scoreboard.json')
     .then(response => response.json())
     .then(function (data) {
         gameAdd(data);
